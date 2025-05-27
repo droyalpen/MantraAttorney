@@ -101,6 +101,34 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Stop default submission
+
+      const form = event.target;
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById('thankYouMessage').style.display = 'block';
+        } else {
+          alert("Oops! There was a problem submitting your form.");
+        }
+      }).catch(error => {
+        alert("Oops! There was a problem submitting your form.");
+      });
+    });
+
+
     
 })(jQuery);
+
 
