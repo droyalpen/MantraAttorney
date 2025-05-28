@@ -18,6 +18,14 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          />
+        <link 
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+          rel="stylesheet"
+          />
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -25,7 +33,7 @@
 
     <body>
         <div class="wrapper">
-             <!-- Top Bar Start -->
+            <!-- Top Bar Start -->
             <div class="top-bar">
                 <div class="container-fluid">
                     <div class="row">
@@ -61,7 +69,8 @@
                 </div>
             </div>
             <!-- Top Bar End -->
-<!-- Nav Bar Start -->
+
+          <!-- Nav Bar Start -->
             <div class="nav-bar">
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -88,14 +97,12 @@
                 </div>
             </div>
             <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
+             <!-- Page Header Start -->
             <div class="page-header">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1>Cookies Policy</h1>
+                            <h2>Consultation Form</h2>
                         </div>
                         
                     </div>
@@ -103,72 +110,108 @@
             </div>
             <!-- Page Header End -->
 
+        <!-- Form section -->
 
-           
-            <!-- Single Page Start -->
-            <div class="single">
-                <div class="container">
-                    
-                    <div class="row">
-                        <div class="col-12">
-                         <br>
-                        <br>
-                        <p>
-                            <h2>Cookies Policy</h2>
-                             <br>
-                            
-                            <strong>Effective Date: 22nd May 2025</strong>
-                            <br>
-                            This Cookies Policy explains how Mantra uses cookies and similar technologies to recognize you when you visit our website.
-                            <br>  
-                            <p> 
-                              <h3>1. What Are Cookies?</h3>
-                               Cookies are small data files that are stored on your device when you visit a website. They help enhance your browsing experience and allow websites to remember your actions and preferences over time. 
-                            </p>  
+  <div class="form container-fluid">
+    <div class="mb-4 mx-auto" style="max-width: 600px;">
+      <div class="form-title">Attorney Consultation Form</div>
+      <div class="form-subtitle">
+        Please fill out the form below to request a consultation with our attorney.
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First Name" required />
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last Name" required />
+          </div>
+        </div>
+      </div>
 
-                             <p> 
-                              <h3>2. How We Use Cookies</h3>
-                               <ol type="i">
-                                  <li>Enable core site functionality. </li>  
-                                    <li> Understand how visitors use our website (analytics).</li>
-                                    <li>  Improve site performance and user experience</li>
-                               </ol>
-                            </p>  
+      <div class="mb-3">
+        <label for="emailAddress" class="form-label">Email Address</label>
+        <input type="email" class="form-control" placeholder="example@example.com" required />
+      </div>
 
-                             <p> 
-                              <h3>3. Types of Cookies We Use</h3>
-                                <ol type="i">
-                                  <li>Strictly Necessary Cookies: Essential for site functionality. </li>  
-                                    <li> Performance Cookies: Collect anonymous data for analytics.</li>
-                                    <li>Third-Party Cookies: Set by external providers (e.g., Google Analytics).</li>
-                                    <li> Functionality Cookies: Remember your preferences and settings.e</li>
-                               </ol>
-                            </p>  
+        <!-- Phone Number -->
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input
+            type="tel"
+            class="form-control"
+            id="phoneNumber"
+            placeholder="(000) 000-0000"
+            pattern="\(\d{3}\) \d{3}-\d{4}"
+            required
+        />
+            <small class="text-muted">Please enter a valid phone number.</small>
+        </div>
 
-                             <p> 
-                              <h3>4. Managing Cookies</h3>
-                               Most browsers allow you to control cookie settings. You can block or delete cookies through your browser settings, but doing so may affect the functionality of our website.
-                                      </p>  
-                        </p>
-                        
-                        </p>
+        <!-- Preferred Contact Method -->
+        <div class="mb-3">
+            <label class="form-label">Preferred Contact Method</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="Email" required />
+            <label class="form-check-label" for="contactEmail">
+                Email
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone" value="Phone" />
+            <label class="form-check-label" for="contactPhone">
+            Phone
+            </label>
+        </div>
+        </div>
 
-                             
- 
-                        </p>
-                            
-                    </div>
+        <!-- Legal Matter -->
+        <div class="mb-3">
+        <label for="legalMatter" class="form-label">Legal Matter</label>
+        <textarea class="form-control" id="legalMatter" rows="4" placeholder="Describe your legal issue..." required></textarea>
+        </div>
+
+            <!-- Supporting Documents -->
+            <div class="mb-4">
+            <label for="supportingDocs" class="form-label">Supporting Documents</label>
+            <div class="border border-2 rounded p-4 text-center bg-light" style="cursor: pointer;">
+                <label for="supportingDocs" class="form-label w-100">
+                <div>
+                    <i class="bi bi-cloud-arrow-up-fill" style="font-size: 3rem;"></i>
                 </div>
+                <strong>Browse Files</strong>
+                <div class="text-muted small">Choose a file</div>
+                </label>
+                <input type="file" id="supportingDocs" class="form-control d-none" />
             </div>
-            <!-- Single Page End -->
-             
+            </div>
 
+        <!-- Preferred Consultation Date and Time -->
+        <div class="mb-4">
+        <label class="form-label">Preferred Consultation Date and Time</label>
+        <div class="row g-2">
+            <div class="col">
+            <input type="date" class="form-control" required />
+            <small class="text-muted">Date</small>
+            </div>
+            <div class="col">
+            <input type="time" class="form-control" required />
+            <small class="text-muted">Hour Minutes</small>
+            </div>
+        </div>
+        </div>
 
+<!-- Submit Button -->
+<div class="d-grid">
+  <button type="submit" class="small-button btn-dark">Submit</button>
+</div>
+  <!-- Form end -->
 
-
-            <!-- Footer Start -->
+   <!-- Footer Start -->
             <div class="footer">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-about">
@@ -227,8 +270,9 @@
                 <div class="container footer-menu">
                     <div class="f-menu">
                         <a href="terms.html">Terms of use</a>
-                        <a href="privacy.html">Privacy policy</a>
-                        <a href="cookies.html">Cookies</a>
+                       <a href="privacy.html">Privacy policy</a>
+                       <a href="cookies.html">Cookies</a>
+                      
                         <a href="contact.html">Help</a>
                        
                     </div>
@@ -248,7 +292,9 @@
             
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
-
+        <!-- Bootstrap 5 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
