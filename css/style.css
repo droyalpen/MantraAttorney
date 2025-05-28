@@ -1069,6 +1069,26 @@ a:focus {
       color: #6c757d;
 }
 
+
+.small-button{
+display: flex;
+justify-content: center;  /* horizontal centering */
+align-items: center;      /* vertical centering (if container has height) */
+padding: 10px;           /* smaller padding */
+font-size: 20px;         /* smaller text */
+color:#000000;         /*  text */
+border: none;
+border-radius: 5px;      /* optional: rounded corners */
+line-height: 3;          /* tighter vertical space */
+width: 50vh;             /* fixed width */
+height: 50px;            /* fixed height */
+cursor: pointer;         /* change cursor on hover */
+transition: background-color 0.3s ease; /* smooth hover */
+}
+.small-button:hover{
+    background-color:#aa9166; /* change background color on hover */
+}
+
 .form-label {
       font-weight: 500;
 }
