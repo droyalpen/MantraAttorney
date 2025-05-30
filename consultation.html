@@ -82,7 +82,7 @@
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                             <div class="ml-auto">
-                                <a class="btn" href="consultation.html">Book a Consultation</a>
+                               <a class="btn" href="consultation.html">Book a Consultation</a>
                             </div>
                         </div>
                     </nav>
@@ -96,7 +96,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Contact Us</h2>
+                            <h2>Book a Consultation</h2>
                         </div>
                         
                     </div>
@@ -110,7 +110,7 @@
                 <div class="container">
                   
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="contact-info">
                                 <div class="contact-item">
                                     <i class="fa fa-map-marker-alt"></i>
@@ -140,66 +140,92 @@
 
 
                         <style>
-    body { 
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .thank-you-message {
-      color: green;
-      margin-top: 20px;
-      display: none;
-    }
+   
   </style>
   </body>
 </head>
-
-
-  <div class="col-md-6">
+<div class="col-md-7">
   <div class="contact-form">
     <form id="contactForm" action="https://formspree.io/f/mwpogkvp" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <input type="subject" name="subject" placeholder="Subject" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+
+      <!-- Dropdown for Legal Services -->
+      <select name="legal_service" required>
+        <option value="" disabled selected>Select Legal Service</option>
+        <option value="Family Law">Family Law</option>
+        <option value="Criminal Defense">Criminal Defense</option>
+        <option value="Business/Corporate Law">Business/Corporate Law</option>
+        <option value="Immigration Law">Immigration Law</option>
+        <option value="Intellectual Property">Intellectual Property</option>
+        <option value="Real Estate Law">Real Estate Law</option>
+        <option value="Labor & Employment">Labor & Employment</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <!-- Dropdown for Prior Contact -->
+      <select class="contactForm" required>
+        <option value="" disabled selected>Have you contacted another firm before us?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
       <button class="btn">Submit</button>
     </form>
-    <div class="thank-you-message" id="thankYouMessage">
+
+    <div class="thank-you-message" id="thankYouMessage" style="display: none;">
       <h4>Thank you, we would get back to you shortly.</h4>
       <button class="btn">Be assured of our highest regards as we look forward to working with You</button>
     </div>
   </div>
-  </div>
+</div>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Stop default submission
+<style>
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
-      const form = event.target;
-      const data = new FormData(form);
+  .contact-form textarea {
+    resize: vertical;
+  }
+</style>
 
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          document.getElementById('thankYouMessage').style.display = 'block';
-        } else {
-          alert("Oops! There was a problem submitting your form.");
-        }
-      }).catch(error => {
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('thankYouMessage').style.display = 'block';
+      } else {
         alert("Oops! There was a problem submitting your form.");
-      });
+      }
+    }).catch(error => {
+      alert("Oops! There was a problem submitting your form.");
     });
-  </script>
+  });
+</script>
+
 
 
                     </div>
