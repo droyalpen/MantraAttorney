@@ -1635,59 +1635,6 @@ transition: background-color 0.3s ease; /* smooth hover */
 }
 
 
-/*******************************/
-/********** Newsletter *********/
-/*******************************/
-.newsletter {
-    position: relative;
-    max-width: 900px;
-    margin: 45px auto -140px auto;
-    padding: 30px 15px;
-    background: #aa9166;
-    z-index: 1;
-}
-
-.newsletter .section-header {
-    margin-bottom: 25px;
-}
-
-.newsletter .section-header h2::before,
-.newsletter .section-header h2::after {
-    border-color: #ffffff;
-}
-
-.newsletter .form {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.newsletter input {
-    height: 50px;
-    border: 2px solid #121518;
-    border-radius: 0;
-}
-
-.newsletter .btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 40px;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #aa9166;
-    background: #121518;
-    border-radius: 0;
-    border: 2px solid #aa9166;
-    transition: .3s;
-}
-
-.newsletter .btn:hover {
-    color: #121518;
-    background: #aa9166;
-}
 
 
 /*******************************/
